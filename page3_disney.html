@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Disney</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body class="disney-bg loaded">
+    <div class="music-toggle" id="musicToggle" title="Ligar/Desligar música">🎵</div>
+
+    <div class="stage">
+        <header class="hogwarts-header">
+            <div class="crest-placeholder">🏮</div>
+            <h1 class="title">O ENCANTO DA DISNEY</h1>
+            <p class="subtitle">✨ Seu próximo passo é no mundo mágico. Lembre-se do filme que eu amo e que VOCÊ me apresentou.</p>
+        </header>
+
+        <main class="login-card">
+            <p style="color: #333;">Qual é a animação da Disney (nome da personagem principal) que conquistou meu coração?</p>
+            <div class="input-row">
+                <input id="password-input" type="text" autocomplete="off" placeholder="Nome da Princesa/Personagem">
+                <button id="enter-button" class="btn">Revelar</button>
+            </div>
+            <p id="error-message" class="error" aria-live="polite"></p>
+
+            <div id="justificativa" style="display:none; margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.7); border-radius: 10px; color: #FFEB3B;">
+                </div>
+        </main>
+    </div>
+    <script src="script3_disney.js"></script>
+    <script src="audio_manager.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            initializeAudio("disney-music.mp3"); // Música Disney
+        });
+    </script>
+</body>
+</html>

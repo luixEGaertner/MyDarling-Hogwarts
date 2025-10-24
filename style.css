@@ -1,0 +1,241 @@
+/* --- ESTILOS INICIAIS (BASE DO SEU PROJETO) --- */
+body {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.loaded {
+  opacity: 1;
+}
+
+/* CORREÇÃO APLICADA: Usando o arquivo local b99-image.jpg */
+body.hogwarts-bg {
+  background: #000 url('b99-image.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  color: #f5f5f5;
+  font-family: 'Cinzel', serif;
+}
+
+/* Estilos de Canvas, Brilhos e Mágia (mantidos) */
+#sparkles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.wand-spark {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffdf7f, rgba(255,215,90,0));
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkle-fade 0.9s ease-out forwards;
+  z-index: 10;
+}
+@keyframes sparkle-fade {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(2); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+/* Layout e Card de Login (adaptado) */
+.stage {
+  position: relative;
+  z-index: 5; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 450px;
+}
+.hogwarts-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.crest-placeholder {
+  font-size: 3em;
+  color: gold;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 2.5em;
+  margin: 0 0 5px 0;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+.subtitle {
+  font-size: 1em;
+  font-style: italic;
+  color: #ccc;
+}
+.login-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  width: 100%;
+  box-sizing: border-box;
+}
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+#password-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 1em;
+}
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffdf7f;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #ffd700;
+}
+.error {
+  color: #ff6347;
+  text-shadow: 0 0 5px rgba(255, 99, 71, 0.8);
+  margin-top: 15px;
+  min-height: 1.2em;
+}
+.music-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
+  z-index: 20;
+}
+
+
+/* --- NOVAS CLASSES DE FUNDO PARA OS TEMAS --- */
+
+/* Fundo para Jurassic Park (page2_jp.html) */
+.jurassic-bg {
+    background: #111 url('fundo_jp.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #FFC300; 
+    font-family: 'Arial Black', sans-serif; 
+}
+.jurassic-bg .login-card {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 30px rgba(76, 175, 80, 0.7); 
+}
+.jurassic-bg .title, .jurassic-bg .subtitle {
+    color: #FFC300;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Fundo para Disney (Rapunzel) (page3_disney.html) */
+.disney-bg {
+    background: linear-gradient(135deg, #673AB7 0%, #E91E63 100%); 
+    background-size: cover;
+    color: #FFEB3B; 
+    font-family: 'Satisfy', cursive; 
+}
+.disney-bg .login-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(255, 235, 59, 0.8); 
+}
+.disney-bg .subtitle {
+    color: #fff; 
+}
+#justificativa {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Fundo para a Pergunta Pessoal (page4_pergunta.html) */
+.personal-bg {
+    background: linear-gradient(145deg, #FFC0CB 0%, #E91E63 100%); 
+    color: #fff;
+    font-family: 'Verdana', sans-serif;
+}
+.personal-bg .login-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(255, 192, 203, 0.9);
+}
+
+
+/* NOVO ESTILO para a MENSAGEM FINAL (final_message.html) */
+.necessities-bg {
+    /* Estilo etéreo/místico (como combinado) */
+    background: linear-gradient(135deg, #2b3a6b 0%, #4a148c 50%, #6f3b7b 100%);
+    color: #e0f7fa; 
+    font-family: 'Georgia', serif; 
+    /* Ajuste para rolagem e layout vertical */
+    min-height: 100vh;
+    padding: 20px 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    box-shadow: inset 0 0 100px rgba(135, 206, 250, 0.5);
+}
+
+/* CONTAINER PRINCIPAL DA DECLARAÇÃO - LARGURA AJUSTADA */
+#secret-content {
+    background-color: rgba(255, 255, 255, 0.15); 
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(173, 216, 230, 0.8);
+    
+    /* Aumento do tamanho máximo para melhor visualização */
+    max-width: 1000px; 
+    width: 95%; 
+    box-sizing: border-box;
+    margin: 40px 0; 
+}
+
+/* Layout para o texto e a imagem lado a lado */
+.final-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; 
+    margin-top: 30px;
+    text-align: left;
+    flex-wrap: wrap-reverse; 
+}
+
+.final-image-container img {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    flex-shrink: 0; 
+    object-fit: cover;
+}
+
+/* Estilo do botão de continuidade */
+#justificativa a {
+    color: #fff !important;
+    text-decoration: none !important;
+    border: 1px solid #fff !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    display: inline-block !important;
+    margin-top: 10px;
+}

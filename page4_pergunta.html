@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Coração</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Verdana:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="personal-bg loaded">
+    <div class="music-toggle" id="musicToggle" title="Ligar/Desligar música">🎵</div>
+    
+    <div class="stage">
+        <header class="hogwarts-header">
+            <div class="crest-placeholder">❤️</div>
+            <h1 class="title">SEGREDO DO MEU CORAÇÃO</h1>
+            <p class="subtitle">🌹 Chegamos ao momento mais pessoal. Não é sobre filmes, é sobre nós.</p>
+        </header>
+
+        <main class="login-card">
+            <p style="color: #fff;">Qual é a coisa que eu mais gosto em você?</p>
+            <div class="input-row">
+                <input id="password-input" type="text" autocomplete="off" placeholder="Resposta (Ex: 'As suas mãos')">
+                <button id="enter-button" class="btn">Destravar a Mensagem</button>
+            </div>
+            <p id="error-message" class="error" aria-live="polite"></p>
+        </main>
+    </div>
+    <script src="script4_pergunta.js"></script>
+    <script src="audio_manager.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            initializeAudio("perguntapessoal-music.mp3"); // Música Pessoal
+        });
+    </script>
+</body>
+</html>

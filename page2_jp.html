@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Jurassic Park</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body class="jurassic-bg loaded">
+    <div class="music-toggle" id="musicToggle" title="Ligar/Desligar música">🎵</div>
+    
+    <div class="stage">
+        <header class="hogwarts-header">
+            <div class="crest-placeholder">🦖</div>
+            <h1 class="title">BEM-VINDA AO JURASSIC PARK!</h1>
+            <p class="subtitle">"A vida encontra um meio." Mas só passarás a partir daqui se souber qual o dinossauro que, segundo o consenso de fãs e biólogos, mais sofreu no mundo de Jurassic Park.</p>
+        </header>
+
+        <main class="login-card">
+            <div class="input-row">
+                <input id="password-input" type="text" autocomplete="off" placeholder="Nome do Dino (Ex: Tyrannosaurus Rex)">
+                <button id="enter-button" class="btn">Avançar</button>
+            </div>
+            <p id="error-message" class="error" aria-live="polite"></p>
+        </main>
+    </div>
+    <script src="script2_jp.js"></script>
+    <script src="audio_manager.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            initializeAudio("jp-music.mp3"); // Música JP
+        });
+    </script>
+</body>
+</html>

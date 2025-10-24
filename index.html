@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portão de Hogwarts</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="hogwarts-bg loaded">
+  <canvas id="sparkles"></canvas>
+
+  <div class="music-toggle" id="musicToggle" title="Ligar/Desligar música">🎵</div>
+
+  <div class="stage">
+    <header class="hogwarts-header">
+      <div class="crest-placeholder">⚡</div>
+      <h1 class="title">Hogwarts — Portão de Entrada</h1>
+      <p class="subtitle">🧙‍♂️ Para entrar, você deve saber a encantadora palavra mágica de levitação.</p>
+    </header>
+
+    <main class="login-card">
+      <div class="input-row">
+        <input id="password-input" type="text" autocomplete="off" placeholder="Diga o feitiço (Ex: Feitiço Simples)" />
+        <button id="enter-button" class="btn">Entrar</button>
+      </div>
+      <p id="error-message" class="error" aria-live="polite"></p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="audio_manager.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        initializeAudio("magic-theme.mp3"); // Música HP
+    });
+  </script>
+  <script src="sparkles.js"></script>
+  <script src="wand.js"></script>
+</body>
+</html>

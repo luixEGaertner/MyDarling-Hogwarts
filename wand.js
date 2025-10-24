@@ -1,0 +1,1 @@
+console.log('Wand script intact');
